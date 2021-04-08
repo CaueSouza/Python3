@@ -1,0 +1,17 @@
+PALAVRAS_PROIBIDAS = ('futebol', 'religiao', 'politica')
+
+textos = [
+    'joao gosta de futebol e politica',
+    'a praia foi divertida'
+]
+
+for texto in textos:
+    found = False
+    for palavra in texto.lower().split():
+        if palavra in PALAVRAS_PROIBIDAS:
+            print('Texto possui pelo menos 1 palavra proibida:', palavra)
+            found = True
+            break
+
+    if not found:
+        print('Texto autorizado: ', texto)
